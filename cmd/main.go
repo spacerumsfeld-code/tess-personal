@@ -11,8 +11,14 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/aws/aws-lambda-go/lambda"
+
 	"tess-personal/internal/server"
 )
+
+func main() {
+	lambda.Start(handler)
+}
 
 func handler() {
 	if err := run(context.Background()); err != nil {
