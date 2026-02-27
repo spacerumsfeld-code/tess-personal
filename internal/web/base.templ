@@ -1,0 +1,19 @@
+package web
+
+templ Base() {
+	<!DOCTYPE html>
+	<html lang="en" class="h-screen scroll-smooth">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width,initial-scale=1"/>
+			<title>TW Fly Fishing</title>
+			<link href="/assets/output.css" rel="stylesheet"/>
+			<script src="/assets/htmx.min.js"></script>
+		</head>
+		<body class="bg-[#f8f6f0] text-gray-800 font-sans antialiased selection:bg-amber-600 selection:text-white">
+			<main class="min-h-screen flex flex-col w-full relative">
+				{ children... }
+			</main>
+		</body>
+	</html>
+}

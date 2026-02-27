@@ -1,0 +1,277 @@
+package web
+
+templ Home() {
+	@Base() {
+		<!-- Navigation -->
+		<nav class="fixed w-full z-50 transition-all duration-300 bg-stone-900/90 backdrop-blur-md text-stone-100 shadow-sm border-b border-stone-800/50">
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex flex-row justify-between items-center py-4">
+					<div class="text-xl font-semibold tracking-wide uppercase">
+						<a href="#">Tess Weigand</a>
+					</div>
+					<div class="hidden md:flex flex-row gap-8 text-sm font-medium tracking-wide">
+						<a href="#meet" class="hover:text-amber-500 transition-colors">Meet Your Guide</a>
+						<a href="#trips" class="hover:text-amber-500 transition-colors">Guided Trips</a>
+						<a href="#contact" class="hover:text-amber-500 transition-colors">Get in Touch</a>
+					</div>
+					<!-- Mobile Menu Button -->
+					<div class="md:hidden">
+						<button class="text-stone-100 hover:text-amber-500 focus:outline-none">
+							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="relative h-[90vh] flex items-center justify-center">
+			<div class="absolute inset-0 z-0">
+				<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,w_2000/v1771814324/IMG_2027_3_vnmqhq.jpg" class="w-full h-full object-cover" alt="Fly Fishing River" fetchpriority="high"/>
+				<div class="absolute inset-0 bg-stone-900/40 mix-blend-multiply"></div>
+				<div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent"></div>
+			</div>
+			<div class="relative z-10 flex flex-col items-center justify-center px-4 md:px-8 text-center mt-16">
+				<h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">Tess Weigand</h1>
+				<p class="text-xl md:text-2xl text-stone-200 mb-10 max-w-2xl font-light drop-shadow-md">Professional Fly Fishing Guide based in the heart of world-class trout waters.</p>
+				<a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-4 px-8 rounded-sm tracking-wide transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Book a Trip</a>
+			</div>
+		</section>
+
+		<!-- Meet Your Guide Section -->
+		<section id="meet" class="py-24 bg-[#f8f6f0]">
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+					<div class="relative group">
+						<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,w_800/v1771814339/about_me_edited_xj1jsc.jpg" alt="Tess Weigand" class="w-full h-auto rounded-sm shadow-xl object-cover aspect-[4/5]" loading="lazy" decoding="async"/>
+						<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-600/10 rounded-full border-2 border-amber-600/20 -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+					</div>
+					<div class="flex flex-col">
+						<p class="text-amber-700 font-semibold tracking-widest uppercase mb-3 text-sm">Meet Your Guide</p>
+						<h2 class="text-4xl font-bold text-stone-900 mb-6">Hi, I'm Tess</h2>
+						<div class="prose prose-stone text-stone-600 space-y-4">
+							<p>Tess Weigand splits her time between her home waters of Penns Creek in central Pennsylvania—where she still guides each spring—and Bozeman, Montana. A Penn State graduate with roots in organic agriculture, she has been guiding since 2018 and quickly found her stride as both a teacher and competitive angler. She has built her reputation on both technical skill and connecting people to the things she cares for most; wild rivers and her Newfoundland dog named Eight.</p>
+							<p>Tess is an inaugural member and current captain of the U.S. Women’s Fly Fishing Team, where she has represented the country in all four World Championships: Norway, British Columbia, Czech Republic, and the USA. A consistent top performer, she helped the team win bronze in BC and became the 2025 Individual World Champion in Idaho. Team USA also took home the team gold, the first country to unseat the previously undefeated Czech Republic.</p>
+							<p>On the water Tess’s guiding philosophy is about connection—to wild places, to healthy fisheries, and to the joy of learning. She thrives on helping anglers push their skills further, especially when it comes to advanced techniques or the bugs that tie it all together. A day on the water could mean a deep dive into the finer details of euro-nymphing, a beautiful float down a famous western river, or stalking the banks for rising fish. She believes fly fishing can be whatever you want it to be, but it should always be rooted in continuous learning, adventure, and ethical angling.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Guided Trips Section -->
+		<section id="trips" class="py-24 bg-stone-900 text-stone-100">
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<p class="text-amber-500 font-semibold tracking-widest uppercase mb-3 text-sm">Adventures on the Water</p>
+					<h2 class="text-4xl font-bold mb-6">Guided Trips</h2>
+					<p class="text-stone-400 max-w-2xl mx-auto text-lg leading-relaxed">Curated experiences designed for anglers of all skill levels. Bring your passion, and we'll provide the rest.</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+					<!-- Trip Card 1: Southwest Montana -->
+					<div class="bg-stone-800 rounded-sm overflow-hidden shadow-lg border border-stone-700/50 hover:border-amber-600/50 transition-colors group flex flex-col">
+						<div class="h-64 overflow-hidden relative">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,w_800/v1771814332/IMG_5054_sgi89y.jpg" alt="Southwest Montana Fly Fishing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async"/>
+						</div>
+						<div class="p-8 flex-1 flex flex-col">
+							<h3 class="text-3xl font-bold mb-2 text-stone-100">Southwest Montana</h3>
+							<p class="text-amber-500 font-medium mb-6">Based out of Bozeman, Montana</p>
+							<div class="text-stone-300 space-y-4 mb-6 flex-1">
+								<div>
+									<h4 class="text-stone-100 font-semibold mb-2 border-b border-stone-700 pb-1">Rates</h4>
+									<ul class="space-y-1 text-sm">
+										<li class="flex justify-between"><span>Full day float or wade trip</span> <span class="text-stone-100 font-medium">$700</span></li>
+										<li class="flex justify-between"><span>Half day wade trip</span> <span class="text-stone-100 font-medium">$500</span></li>
+										<li class="text-stone-400 text-xs italic mt-1">(one or two anglers)</li>
+									</ul>
+								</div>
+								<div class="text-sm space-y-2">
+									<p class="text-stone-400 italic">Guiding through Fly Fishing Only Adventures - Outfitter #7504</p>
+									<p><span class="text-stone-100 font-medium whitespace-nowrap">Included:</span> rods, reels, terminal tackle, and flies.</p>
+									<p><span class="text-stone-100 font-medium whitespace-nowrap">Not included:</span> fishing license, boots and waders, lunch.</p>
+									<p class="font-medium text-amber-500/90 pt-2 border-t border-stone-700 mt-2">A lifetime of rivers and lakes to explore!</p>
+								</div>
+							</div>
+							<div class="mt-auto pt-4 border-t border-stone-700/50">
+								<a href="#contact" class="inline-flex items-center text-amber-500 font-medium hover:text-amber-400 transition-colors group-hover:translate-x-1 duration-300">
+									Inquire Now 
+									<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Trip Card 2: Central Pennsylvania -->
+					<div class="bg-stone-800 rounded-sm overflow-hidden shadow-lg border border-stone-700/50 hover:border-amber-600/50 transition-colors group flex flex-col">
+						<div class="h-64 overflow-hidden relative">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,w_800/v1771814330/IMG_4711_i97muj.jpg" alt="Central Pennsylvania Fly Fishing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async"/>
+						</div>
+						<div class="p-8 flex-1 flex flex-col">
+							<h3 class="text-3xl font-bold mb-2 text-stone-100">Central Pennsylvania</h3>
+							<p class="text-amber-500 font-medium mb-6">Based out of Coburn, Pennsylvania</p>
+							<div class="text-stone-300 space-y-4 mb-6 flex-1">
+								<div>
+									<h4 class="text-stone-100 font-semibold mb-2 border-b border-stone-700 pb-1">Rates</h4>
+									<ul class="space-y-1 text-sm">
+										<li class="flex justify-between"><span>Half day wade - 1 angler</span> <span class="text-stone-100 font-medium">$400</span></li>
+										<li class="flex justify-between"><span>Half day wade - 2 anglers</span> <span class="text-stone-100 font-medium">$475</span></li>
+										<li class="flex justify-between"><span>Full day wade - 1 angler</span> <span class="text-stone-100 font-medium">$475</span></li>
+										<li class="flex justify-between"><span>Full day wade - 2 anglers</span> <span class="text-stone-100 font-medium">$550</span></li>
+										<li class="flex justify-between"><span>Float trip - 1 or 2 anglers</span> <span class="text-stone-100 font-medium">$600</span></li>
+									</ul>
+								</div>
+								<div class="text-sm space-y-2">
+									<p class="text-stone-400 italic">Guiding through The Feathered Hook Guide Service and Fly Shop</p>
+									<p><span class="text-stone-100 font-medium whitespace-nowrap">Included:</span> rods, reels, terminal tackle, flies, & lunch.</p>
+									<p><span class="text-stone-100 font-medium whitespace-nowrap">Not included:</span> fishing license, boots & waders (rentals available).</p>
+									<p class="font-medium text-amber-500/90 pt-2 border-t border-stone-700 mt-2 text-xs leading-relaxed">Penns Creek, Pine Creek, Spring Creek, Big Fishing Creek, Little Juniata River</p>
+								</div>
+							</div>
+							<div class="mt-auto pt-4 border-t border-stone-700/50">
+								<a href="#contact" class="inline-flex items-center text-amber-500 font-medium hover:text-amber-400 transition-colors group-hover:translate-x-1 duration-300">
+									Inquire Now 
+									<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Grid of 9 photos -->
+				<div class="mt-20">
+					<div class="text-center mb-10">
+						<h3 class="text-2xl font-bold text-stone-100">On The Water</h3>
+					</div>
+					<div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814333/IMG_4137_hguhcz.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814335/IMG_6970_wwvlet.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814331/IMG_7065_kqlxpg.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814322/IMG_9457_j92wfj.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814321/IMG_7658_haqxhr.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814324/IMG_8872_eeuig6.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814327/IMG_5659_leokjv.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814334/IMG_1220_copy_exvv6y.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+						<div class="aspect-square overflow-hidden bg-stone-800 rounded-sm">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto,c_fill,w_600,h_600/v1771814336/IMG_0271_edited_bo63oc.jpg" alt="Fly Fishing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async"/>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sponsors -->
+				<div class="mt-28">
+					<div class="text-center mb-12">
+						<h3 class="text-2xl font-bold text-stone-100">Supported By</h3>
+					</div>
+					<div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-3xl mx-auto">
+						<div class="flex-1 bg-stone-100 p-8 rounded-sm shadow-sm flex items-center justify-center group hover:bg-white transition-colors duration-300 min-h-[160px]">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto/v1771818532/TT-Logo-1024x434_0d21f9a4-1351-410f-be02-896db541fe32_480x480_1_uplrx9.avif" alt="TT Logo" class="max-w-full max-h-24 object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" loading="lazy" decoding="async"/>
+						</div>
+						<div class="flex-1 bg-stone-100 p-8 rounded-sm shadow-sm flex items-center justify-center group hover:bg-white transition-colors duration-300 min-h-[160px]">
+							<img src="https://res.cloudinary.com/duwxxu8lp/image/upload/f_auto,q_auto/v1771818525/sa-logo_znjq9q.png" alt="SA Logo" class="max-w-full max-h-24 object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" loading="lazy" decoding="async"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Get In Touch Section -->
+		<section id="contact" class="py-24 bg-white relative">
+			<div class="absolute inset-0 bg-[#f8f6f0]/50"></div>
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="text-center mb-16">
+					<p class="text-amber-700 font-semibold tracking-widest uppercase mb-3 text-sm">Ready to Cast?</p>
+					<h2 class="text-4xl font-bold text-stone-900 mb-6">Get in Touch</h2>
+					<p class="text-stone-600 text-lg">Send me a message below to inquire about dates, rates, and any specific requests. I'll get back to you shortly.</p>
+				</div>
+
+				<div class="bg-white p-8 md:p-12 rounded-sm shadow-xl border border-stone-100">
+					<form id="contact-form" hx-post="/contact" hx-target="#form-response" hx-swap="innerHTML" class="space-y-6">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="name" class="block text-sm font-medium text-stone-700 mb-2">Name</label>
+								<input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors" placeholder="Jane Doe"/>
+							</div>
+							<div>
+								<label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email</label>
+								<input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors" placeholder="jane@example.com"/>
+							</div>
+						</div>
+						<div>
+							<label for="trip-type" class="block text-sm font-medium text-stone-700 mb-2">Trip Interest</label>
+							<select id="trip-type" name="trip-type" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors">
+								<option>Full Day Float (MT)</option>
+								<option>Half Day Wade (MT)</option>
+								<option>Half Day Wade (PA)</option>
+								<option>Full Day Wade (PA)</option>
+								<option>Float Trip (PA)</option>
+								<option>Just saying hello!</option>
+							</select>
+						</div>
+						<div>
+							<label for="message" class="block text-sm font-medium text-stone-700 mb-2">Message</label>
+							<textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors" placeholder="Tell me about your experience level, desired dates, or any questions..."></textarea>
+						</div>
+						<div class="pt-4 text-center">
+							<button type="submit" class="w-full md:w-auto bg-stone-900 hover:bg-amber-700 text-white font-medium py-4 px-12 rounded-sm tracking-wide transition-all shadow hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-50">Send Message</button>
+						</div>
+						<div id="form-response" class="mt-4 text-center"></div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-stone-900 py-12 border-t border-stone-800 text-center">
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+				<div class="text-stone-400 text-sm mb-4 md:mb-0">
+					© 2026 TW Fly Fishing. All rights reserved.
+				</div>	
+				<div class="flex space-x-6 text-stone-500">
+					<a href="#" class="hover:text-amber-500 transition-colors">
+						<span class="sr-only">Instagram</span>
+						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+						</svg>
+					</a>
+					<a href="#" class="hover:text-amber-500 transition-colors">
+						<span class="sr-only">Facebook</span>
+						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</footer>
+	}
+}
+
+templ ContactSuccess() {
+	<div class="bg-green-50 border border-green-200 text-green-800 rounded-sm p-4 text-center">
+		Thank you for reaching out! I'll get back to you as soon as possible.
+	</div>
+}
+
+templ ContactError() {
+	<div class="bg-red-50 border border-red-200 text-red-800 rounded-sm p-4 text-center">
+		Sorry, there was an error sending your message. Please try again later.
+	</div>
+}
