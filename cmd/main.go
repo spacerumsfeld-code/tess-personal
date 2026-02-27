@@ -14,7 +14,7 @@ import (
 	"tess-personal/internal/server"
 )
 
-func main() {
+func handler() {
 	if err := run(context.Background()); err != nil {
 		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
