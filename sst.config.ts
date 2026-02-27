@@ -11,7 +11,7 @@ export default $config({
   },
   async run() {
     const func = new sst.aws.Function("TessFunc", {
-      handler: "./cmd",
+      handler: "./",
       runtime: 'go',
       url: true,
     });
