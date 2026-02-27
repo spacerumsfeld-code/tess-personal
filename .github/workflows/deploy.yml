@@ -55,11 +55,10 @@ jobs:
             https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
           chmod +x tailwindcss
 
-      - name: Build Go binary
+      - name: Generate assets
         run: |
           templ generate
           ./tailwindcss -i internal/web/styles/input.css -o internal/web/assets/output.css
-          go build -o main cmd/main.go
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
